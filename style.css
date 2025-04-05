@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: whitesmoke;
+}
+
+.container{
+    display: inline-block;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+h1{
+    color: hsl(0, 0%, 25%);
+    font-weight: bold;
+    text-shadow: 2px 2px 2px hsl(0, 0%, 90%);
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.card{
+    border: 5px double hsla(0, 0%, 0%, 0);
+    padding: 10px;
+    height: 450px;
+    align-content: baseline;
+    width: 350px;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, hsl(225, 100%, 70%), hsl(25, 100%, 70%));
+    color: white;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 85%);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    display: none;
+}
+
+.card:hover{
+    color: hsl(0, 0%, 95%);
+}
+
+#locationInput{
+    margin-bottom: 50px;
+    width: 250px;
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 5px;
+    border: 2px solid hsl(0, 0%, 75%);
+}
+
+#locationInput:hover{
+    background-color: hsl(0, 0%, 98%);
+}
+
+#searchButton{
+    font-size: 1.2rem;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 100px;
+    color: white;
+    background-color: hsl(215, 100%, 40%);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+#searchButton:hover{
+    background-color: hsl(215, 100%, 50%);
+    color: hsl(0, 0%, 90%);
+}
+
+
+#searchButton:active{
+    background-color: hsl(215, 100%, 60%);
+}
+
+#emojiDisplay{
+    font-size: 5rem;
+}
+
+#errorDisplay{
+    border: 3px solid hsl(0, 0%, 75%);
+    box-shadow: 5px 5px 5px hsl(0, 0%, 85%);
+    border-radius: 5px;
+    max-width: 250px;
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+    background-color: white;
+    color: hsl(0, 80%, 50%);
+    display: none;
+    padding: 6px;
+}
+
+#errorDisplay:hover{
+    background-color: hsl(0, 0%, 98%);
+}
+
+#errorHeader{
+    display: block;
+    padding: 4px;
+    background-color: hsl(0, 0%, 96%);
+    border-radius: 5px;
+}
+
+#closeButton{
+    font-size: 0.9rem;
+    border-radius: 50%;
+    border: none;
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 75%);
+    float: right;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#closeButton:hover{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 95%, 50%);
+}
+
+#closeButton:active{
+    background-color: hsl(0, 95%, 40%);
+}
