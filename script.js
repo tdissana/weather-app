@@ -16,12 +16,16 @@ async function getWeatherData() {
                 displayWeatherInfo(result);
             }
             else {
-                throw new Error("Could Not Fetch Weather Data");
+                throw new Error(`${response.status}: ${response.statusText}`);
             }
         }
         catch (error) {
-            apiKey = undefined;
+
             displayErrorInfo(error.message);
+            
+            if (error.message === "401: Unauthorized") {
+                apiKey = undefined;
+            }
         }
     }
     else {
