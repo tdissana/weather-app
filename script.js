@@ -1,13 +1,22 @@
-let apiKey = undefined;
+import config from './config.js';
+
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', () => {
+    getWeatherData();
+});
 
 async function getWeatherData() {
+
+    const baseUrl = config.BASE_URL;
+    let apiKey = config.API_KEY;
 
     const city = document.getElementById("locationInput").value.trim();
     
     if (city) {
         
-        apiKey = (apiKey === undefined) ? window.prompt("Enter Your Secret API Key: ").trim() : apiKey;
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+        apiKey = apiKey || window.prompt("Enter Your Secret API Key: ").trim();
+        const url = `${baseUrl}?q=${city}&appid=${apiKey}`
         
         try {
             const response = await fetch(url);

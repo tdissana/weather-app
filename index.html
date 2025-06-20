@@ -13,15 +13,15 @@
         <h1 onclick="refresh()">Weather Application</h1>
         <div class="searchBar">
             <input id="locationInput" type="text" placeholder="Search a Location...">
-            <button id="searchButton" onclick="getWeatherData()">Search</button>
+            <button id="searchButton">Search</button>
         </div>
 
         <div id="card" class="card">
             <h2 id="locationDisplay">New York, US</h2>
             <p>Temperature: <span id="tempDisplay">25 °C</span></p>
-            <p>Humidity: <span id="humidityDisplay">60%</span</p>
-            <p>Description: <span id="descDisplay">Cloudy</span</p>
-            <p><span id="emojiDisplay">🌞</span</p>
+            <p>Humidity: <span id="humidityDisplay">60%</span></p>
+            <p>Description: <span id="descDisplay">Cloudy</span></p>
+            <p><span id="emojiDisplay">🌞</span></p>
         </div>
 
         <div id="errorDisplay">
@@ -33,6 +33,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
