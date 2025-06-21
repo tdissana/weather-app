@@ -4,15 +4,18 @@ const cors = require('cors');
 const port = 3000;
 require('dotenv').config();
 
+const baseUrl = process.env.BASE_URL;
+const apiKey = process.env.API_KEY;
+const FRONT_END_URL = process.env.FRONT_END_URL;
+
 const corsOptions = {
-  origin: ['http://127.0.0.1:5500'],
+  origin: [FRONT_END_URL],
   methods: ['GET'],
 };
 
 app.use(cors(corsOptions));
 
-const baseUrl = process.env.BASE_URL;
-const apiKey = process.env.API_KEY;
+
 
 app.get('/weather/secrets', (req, res) => {
   res.json({
