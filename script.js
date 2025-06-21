@@ -14,7 +14,7 @@ locationInput.addEventListener('input', () => {
 });
 
 const setAPISecrets = async () => {
-    return fetch('https://weather-app-server-kwxb.onrender.com')
+    return fetch('https://weather-app-server-kwxb.onrender.com/weather/secrets')
         .then(response => {
             if (!response.ok) throw new Error("Please wait few seconds for server to up. Then try again in a moment.");
             return response.json();
