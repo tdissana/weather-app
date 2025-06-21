@@ -1,0 +1,6 @@
+Build the Docker image: docker build -t your-image-name:tag .
+Tag the docker image: docker tag your-image-name your-dockerhub-username/your-image-name:tag
+Run the Docker container: docker run -p 3000:3000 your-dockerhub-username/your-image-name:tag
+Remove docker images: docker rmi IMAGE_ID
+Remove docker container: docker remove CONTAINER_ID
+Push the docker image to the repo: docker push your-dockerhub-username/your-image-name
