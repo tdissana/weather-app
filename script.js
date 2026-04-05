@@ -28,14 +28,15 @@ async function getWeatherData() {
         },
       );
 
+      const data = await response.json();
+
       if (response.ok) {
-        const result = await response.json();
-        displayWeatherInfo(result);
+        displayWeatherInfo(data);
       } else {
-        throw new Error(`${response.status}: ${response.statusText}`);
+        throw new Error(data.error || data.message || "Something went wrong");
       }
     } catch (error) {
-      displayErrorInfo(error.message);
+      displayErrorInfo(error.message || "Network error");
     }
   } else {
     displayErrorInfo("Please Enter a Valid Location");
