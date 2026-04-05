@@ -58,7 +58,7 @@ function displayWeatherInfo(data) {
     "locationDisplay",
   ).textContent = `${city}, ${country}`);
   const tempDisplay = (document.getElementById("tempDisplay").textContent =
-    String((temp - 273.15).toFixed(1)) + " °C");
+    String((temp).toFixed(1)) + " °C");
   const humidityDisplay = (document.getElementById(
     "humidityDisplay",
   ).textContent = String(humidity.toFixed(0)) + "%");
